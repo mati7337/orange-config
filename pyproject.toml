@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orange-config"
+description = "Decrypt and encrypt config files from orange modems"
+version = "1.0"
+dependencies = [
+	"pycryptodome"
+]
+
+[project.scripts]
+orange-config = "orange_config.__init__:main"
