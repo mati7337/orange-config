@@ -56,8 +56,8 @@ cfg_encrypted = orange_config.dumps(cfg)
 cfg_new = orange_config.config_type.Orange_config( \
 	DATA, \
 	KEY, \
-	IV \ # You can set IV to None if you don't use keep_iv=True
-)
+	IV)
+# You can set IV to None if you don't use keep_iv=True
 
 # If you want to use a specific IV for encryption use the keep_iv flag
 orange_config.dumps(cfg_new, keep_iv=True)
@@ -95,6 +95,6 @@ The actual keys should be located in `/security/hgwcfg/hgwcfg.key`. This file mi
 
 To add these keys to `orange-config` first convert them to hex using
 ```shell
-python -c "import base64; print(base64.b64decode('1 LINE FROM hgwcfg.key').hex())"`.
+python -c "import base64; print(base64.b64decode('1 LINE FROM hgwcfg.key').hex())"
 ```
 You can then add the key with some sensible name to `orange_config/keys.py` to the `keys` dict.
